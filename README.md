@@ -1,5 +1,12 @@
 # vue-django-webpack-boilerplate
 
+> [@NdagiStanley](https://github.com/NdagiStanley) has mirrored the [fork](https://github.com/NdagiStanley/vue-django-fork) to have this repo here. This starterpack has proved useful to many and I thank you for the emails I have received from all of you. The reasoning behind this mirror is that this is an effort to **support the users** more by develop further on this project. From here on, I am calling on all potential collaborators by making it easier to make [PRs](https://github.com/NdagiStanley/vue-django/pulls) and adding utility of [Issues](https://github.com/NdagiStanley/vue-django/issues) in this 'new' repo (Of course with the same name :) ). Lastly, just so you know, I'll be keeping up with developments in the [`original`](https://github.com/vuejs-templates/webpack).
+
+<p align="center">
+  <b>Listed in</b>
+  <br>
+  <a href="https://github.com/vuejs/awesome-vue#scaffold" target="_blank"><img src="https://camo.githubusercontent.com/224f79940611c6c12fb649128eca1cae31086d23/68747470733a2f2f7261776769742e636f6d2f7675656a732f617765736f6d652d7675652f6d61737465722f6c6f676f2e706e67" align="center" height="150" alt="Awesome VueJS"></a>
+</p>
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction integrated into a django application
 
@@ -48,7 +55,9 @@ To deploy your django project
 
 Then get to [localhost:8000](http://localhost:8000/). You should have a page exactly like the image below or as the deployed instance mentioned earlier: [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/)
 
-![](http://i.imgur.com/sY3IpBE.png?1)
+<p align="center">
+  <img src="http://i.imgur.com/sY3IpBE.png?1" align="center" height="500" alt="Vue-Django">
+</p>
 
 > Docker
 
