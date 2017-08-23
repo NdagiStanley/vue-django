@@ -56,11 +56,10 @@ Open the app [here](localhost:8000)
 
 Ensure that docker is running.
 
-If you use docker in your workflow, there is a Dockerfile in the root directory for you. Simply run:
+If you use docker in your workflow, there is a Dockerfile (that you can build an image from) in the root directory for you. `docker-compose` is the easiest way to get up and running. Simply run:
 
 ```bash
-$ docker build -t [image-name] .
-$ docker run [image-name]
+$ docker-compose up
 ```
 
 Open the app [here](localhost:8000)
