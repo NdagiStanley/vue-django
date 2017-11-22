@@ -18,7 +18,7 @@ module.exports = {
       "type": "string",
       "required": true,
       "label": "Project version",
-      "default": "0.1.0"
+      "default": "1.0.0"
     },
     "description": {
       "type": "string",
