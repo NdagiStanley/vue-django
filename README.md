@@ -23,6 +23,7 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 <a href="https://codeclimate.com/github/NdagiStanley/vue-django"><img src="https://codeclimate.com/github/NdagiStanley/vue-django/badges/issue_count.svg" /></a>
 [![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
 [![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
+[![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
 
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
 
@@ -34,8 +35,10 @@ This is a project template that includes `VueJS` and `Django` based on the [vue-
 $ npm install -g vue-cli
 ```
 You might want to use ```sudo``` if you encounter permissions error
+
+This branch has VueJS version 2 and Django version 1 hence the branch name: `v2-d1`.
 ```bash
-$ vue init NdagiStanley/vue-django my-project
+$ vue init NdagiStanley/vue-django#v2-d1 my-project
 $ cd my-project
 $ npm install
 ```
