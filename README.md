@@ -27,6 +27,8 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
 
+[Vue-Django Docs](https://ndagistanley.github.io/vue-django/) offer a more comprehensive documentation.
+
 ## Usage of VueDjango
 
 This is a project template that includes `VueJS` and `Django` based on the [vue-cli](https://github.com/vuejs/vue-cli) templates. **It is recommended to use npm 3+ for a more efficient dependency tree.**
@@ -72,7 +74,7 @@ Use your preferred _image name_ in place of the `image-name` in the command. Rem
 
 There is a docker container for vue-django that you can run. Simply run the following command.
 ```bash
-docker run -p 8000:8000 stanmd/vue-django python manage.py runserver 0.0.0.0:8000
+docker run -p 8000:8000 stanmd/vue-django
 ```
 
 Then get to [localhost:8000](http://localhost:8000/). You should have a page exactly like the image above
