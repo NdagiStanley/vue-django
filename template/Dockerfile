@@ -10,7 +10,7 @@ RUN pip install -r requirements.txt
 
 # Run the following commands for deployment
 COPY . .
-RUN npm run build
+RUN npm set progress=false && npm install -s --no-progress && npm run build
 RUN python format_index_html.py
 RUN python manage.py collectstatic --noinput
 
