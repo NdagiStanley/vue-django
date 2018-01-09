@@ -6,7 +6,7 @@ WORKDIR /usr/bin/app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-RUN npm run build
+RUN npm set progress=false && npm install -s --no-progress && npm run build
 RUN python format_index_html.py
 RUN python manage.py collectstatic --noinput
 EXPOSE 8000
