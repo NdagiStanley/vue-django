@@ -1,9 +1,13 @@
 <template>
   <div id="app">
-    <img class="logo" src="./assets/vue.png">
+    <img class="logo" src="./assets/logo.png">
     <br>
     <img class="logo" src="./assets/dj.png">
-    <hello></hello>
+    {{#router}}
+    <router-view/>
+    {{else}}
+    <hello/>
+    {{/router}}
     <p>
       Welcome to your Django - Vue.js app!
     </p>
@@ -11,13 +15,16 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
+{{#unless router}}
+import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+{{/unless}}
 export default {
+  name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
   components: {
-    Hello
-  }
-}
+    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
+}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
 <style>
@@ -36,7 +43,7 @@ body {
   color: #2c3e50;
   margin-top: -100px;
   max-width: 600px;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
   text-align: center;
 }
 

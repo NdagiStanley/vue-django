@@ -9,10 +9,8 @@ with open(file, "r+") as f:
     f.write("{% load staticfiles %}\n" + s)
 
 for i, line in enumerate(fileinput.input(file, inplace=1)):
-    sys.stdout.write(line.replace('href=//', "href={% static '"))
+    sys.stdout.write(line.replace('/static/', "{% static '"))
 for i, line in enumerate(fileinput.input(file, inplace=1)):
-    sys.stdout.write(line.replace('css', "css' %}"))
+    sys.stdout.write(line.replace('.css', ".css' %}"))
 for i, line in enumerate(fileinput.input(file, inplace=1)):
-    sys.stdout.write(line.replace('src=//', "src={% static '"))
-for i, line in enumerate(fileinput.input(file, inplace=1)):
-    sys.stdout.write(line.replace('js', "js' %}"))
+    sys.stdout.write(line.replace('.js', ".js' %}"))

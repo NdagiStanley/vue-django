@@ -1,7 +1,58 @@
 .DS_Store
 node_modules/
-dist/
-npm-debug.log
+/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+{{#unit}}
+/test/unit/coverage/
+{{/unit}}
+{{#e2e}}
+/test/e2e/reports/
 selenium-debug.log
-test/unit/coverage
-test/e2e/reports
+{{/e2e}}
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Django stuff:
+*.log
+local_settings.py
+
+# dotenv
+.env
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# Staticfiles
+staticfiles/
