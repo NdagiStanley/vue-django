@@ -3,7 +3,7 @@
 > [@NdagiStanley](https://github.com/NdagiStanley) has mirrored the [fork](https://github.com/NdagiStanley/vue-django-fork) to have this repo here. This starterpack has proved useful to many and I thank you for the emails I have received from all of you. The reasoning behind this mirror is that this is an effort to **support the users** more by develop further on this project. From here on, I am calling on all potential collaborators by making it easier to make [PRs](https://github.com/NdagiStanley/vue-django/pulls) and adding utility of [Issues](https://github.com/NdagiStanley/vue-django/issues) in this 'new' repo (Of course with the same name :) ). Lastly, just so you know, I'll be keeping up with developments in the [`original`](https://github.com/vuejs-templates/webpack).
 
 # Introduction
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction integrated into a django application
+> A full-featured Webpack setup of a VueJS 2.x app with hot-reload, lint-on-save, unit testing & css extraction integrated into a Django 2.x application (There are other versions too)
 
 ### [Github repository](https://github.com/NdagiStanley/vue-django)
 
@@ -13,11 +13,22 @@
 <a href="https://codeclimate.com/github/NdagiStanley/vue-django"><img src="https://codeclimate.com/github/NdagiStanley/vue-django/badges/issue_count.svg" /></a>
 [![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
 [![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
+[![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
 
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate. There is a docker image for vue-django that you can run to check it out locally:
 ```bash
-docker run -p 8000:8000 stanmd/vue-django python manage.py runserver 0.0.0.0:8000
+docker run -p 8000:8000 stanmd/vue-django
 ```
+
+The past command will run the latest tag of the image which has VueJS version 2.x and Django vesion 2.x. There are several other tags of the image you can run:
+
+- For the image with VueJS version 1.x and Django vesion 1.x:
+
+`docker run -p 8000:8000 stanmd/vue-django:v1-d1`
+
+- For the image with VueJS version 2.x and Django vesion 1.x:
+
+`docker run -p 8000:8000 stanmd/vue-django:v2-d1`
 
 <p align="center">
   <b>Listed in</b>
@@ -46,8 +57,13 @@ You might want to use ```sudo``` if you encounter permissions error
 ```bash
 $ vue init NdagiStanley/vue-django my-project
 ```
-If you desire to use VueJS version 1.x with Django vesion 1.x run: `vue init NdagiStanley/vue-django#v1-d1 my-project`.
-If you desire to use VueJS version 2.x with Django vesion 1.x run: `vue init NdagiStanley/vue-django#v2-d1 my-project` instead.
+If you desire to use VueJS version 1.x with Django vesion 1.x run:
+
+`vue init NdagiStanley/vue-django#v1-d1 my-project`.
+
+If you desire to use VueJS version 2.x with Django vesion 1.x run: 
+
+`vue init NdagiStanley/vue-django#v2-d1 my-project` instead.
 
 `my-project` can be replaced with the directory name you prefer. If you do decide on another name take care to replace the next occurence of `my-project` with your new directory name.
 
