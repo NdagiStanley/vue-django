@@ -6,15 +6,17 @@ WORKDIR /app
 
 # Install python, pip and python packages
 RUN apk add python3 curl
-RUN curl https://bootstrap.pypa.io/get-pip.py | python3
-RUN rm -rf /var/cache/apk/*
-RUN pip3 install --upgrade pip
 COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
+  && rm -rf /var/cache/apk/* \
+  && pip3 install --upgrade pip \
+  && pip3 install -r requirements.txt
 
 # Run the following commands for deployment
+COPY package.json package.json
+RUN npm set progress=false && npm install -s --no-progress
 COPY . .
-RUN npm set progress=false && npm install -s --no-progress && npm run build
+RUN npm run build
 RUN python3 format_index_html.py
 RUN python3 manage.py collectstatic --noinput
 

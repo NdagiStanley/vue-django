@@ -1,5 +1,5 @@
-echo 'Running npm build'
-npm run build
+echo 'Running npm install & npm build'
+npm set progress=false && npm install -s --no-progress && npm run build
 echo 'Done...'
 
 echo 'Format index.html as Jinja template'

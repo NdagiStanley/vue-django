@@ -20,7 +20,7 @@
 docker run -p 8000:8000 stanmd/vue-django
 ```
 
-Then get to [localhost:8000](0.0.0.0:8000).
+Open the app at [localhost:8000](localhost:8000)
 
 The past command will run the latest tag of the image which has VueJS version 2.x and Django vesion 2.x. There are several other tags of the image you can run:
 
@@ -80,7 +80,7 @@ $ npm run dev
 Ensure python and pip is installed. Preferably create a virtual environment for the project.
 
 ```bash
-$ npm run build
+$ npm set progress=false && npm install -s --no-progress && npm run build
 $ pip install -r requirements.txt
 $ python format_index_html.py
 $ python manage.py collectstatic --noinput
