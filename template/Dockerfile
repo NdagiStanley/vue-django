@@ -1,11 +1,15 @@
-FROM node
-RUN apt-get update
+FROM node:alpine
+MAINTAINER Stanley Ndagi "ndagis@gmail.com"
+RUN apk update && apk upgrade
+
+WORKDIR /app
 
 # Install python, pip and python packages
-RUN apt-get install -y python
+RUN apk add python curl
 RUN curl https://bootstrap.pypa.io/get-pip.py | python
-WORKDIR /usr/bin/app
-COPY requirements.txt .
+RUN rm -rf /var/cache/apk/*
+RUN pip install --upgrade pip
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Run the following commands for deployment
