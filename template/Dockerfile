@@ -1,21 +1,25 @@
-FROM node
-RUN apt-get update
+FROM node:alpine
+MAINTAINER Stanley Ndagi "ndagis@gmail.com"
+RUN apk update && apk upgrade
+
+WORKDIR /app
 
 # Install python, pip and python packages
-RUN apt-get install -y python
-RUN curl https://bootstrap.pypa.io/get-pip.py | python
-WORKDIR /usr/bin/app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN apk add python3 curl
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3
+RUN rm -rf /var/cache/apk/*
+RUN pip3 install --upgrade pip
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Run the following commands for deployment
 COPY . .
-RUN npm run build
-RUN python format_index_html.py
-RUN python manage.py collectstatic --noinput
+RUN npm set progress=false && npm install -s --no-progress && npm run build
+RUN python3 format_index_html.py
+RUN python3 manage.py collectstatic --noinput
 
 # EXPOSE port to be used
 EXPOSE 8000
 
 # Set command to run as soon as container is up
-CMD python manage.py runserver 0.0.0.0:8000
+CMD python3 manage.py runserver 0.0.0.0:8000
