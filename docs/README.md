@@ -31,7 +31,7 @@ docker run -p 8000:8000 stanmd/vue-django python manage.py runserver 0.0.0.0:800
 
 ## Usage of Vue-Django
 
-This is a project template that includes `VueJS` and `Django` based on the [vue-cli](https://github.com/vuejs/vue-cli) templates. **It is recommended to use npm 3+ for a more efficient dependency tree.**
+This is a project template that includes `VueJS` version 2.x and `Django` version 2.x based on the [vue-cli](https://github.com/vuejs/vue-cli) templates. **It is recommended to use npm 3+ for a more efficient dependency tree.**
 
 ## Quickstart
 
@@ -46,7 +46,8 @@ You might want to use ```sudo``` if you encounter permissions error
 ```bash
 $ vue init NdagiStanley/vue-django my-project
 ```
-If you desire to use VueJS version 1.x run: `vue init NdagiStanley/vue-django#1.0 my-project` instead.
+If you desire to use VueJS version 1.x with Django vesion 1.x run: `vue init NdagiStanley/vue-django#v1-d1 my-project`.
+If you desire to use VueJS version 2.x with Django vesion 1.x run: `vue init NdagiStanley/vue-django#v2-d1 my-project` instead.
 
 `my-project` can be replaced with the directory name you prefer. If you do decide on another name take care to replace the next occurence of `my-project` with your new directory name.
 
