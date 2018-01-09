@@ -5,16 +5,19 @@ RUN apk update && apk upgrade
 WORKDIR /app
 
 # Install python, pip and python packages
-RUN apk add python curl
-RUN curl https://bootstrap.pypa.io/get-pip.py | python
-RUN rm -rf /var/cache/apk/*
-RUN pip install --upgrade pip
+RUN apk --update add python py-pip openssl ca-certificates py-openssl wget
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-dev py-pip build-base \
+  && rm -rf /var/cache/apk/* \
+  && pip install --upgrade pip \
+  && pip install -r requirements.txt \
+  && apk del build-dependencies
 
 # Run the following commands for deployment
+COPY package.json package.json
+RUN npm set progress=false && npm install -s --no-progress
 COPY . .
-RUN npm set progress=false && npm install -s --no-progress && npm run build
+RUN npm run build
 RUN python format_index_html.py
 RUN python manage.py collectstatic --noinput
 
