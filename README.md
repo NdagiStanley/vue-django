@@ -54,7 +54,7 @@ $ npm run dev
 ```
 
 ## Deploy
-To deploy your django project
+To deploy your django project, still within `my-project` directory, run:
 
 `$ .deploy.sh`
 
