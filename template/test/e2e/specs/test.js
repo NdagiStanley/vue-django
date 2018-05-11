@@ -14,7 +14,7 @@ module.exports = {
       .assert.elementPresent('.hello')
       .assert.elementPresent('.logo')
       .assert.containsText('h1', 'Hello World!')
-      .assert.elementCount('p', 2)
+      .assert.elementCount('p', 1)
       .end(){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
