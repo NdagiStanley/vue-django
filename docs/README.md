@@ -9,11 +9,12 @@
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![Code Climate](https://codeclimate.com/github/NdagiStanley/vue-django/badges/gpa.svg)](https://codeclimate.com/github/NdagiStanley/vue-django)
-<a href="https://codeclimate.com/github/NdagiStanley/vue-django"><img src="https://codeclimate.com/github/NdagiStanley/vue-django/badges/issue_count.svg" /></a>
+[![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
+
+[![Build Status](https://semaphoreci.com/api/v1/stanmd/vue-django/branches/develop/badge.svg)](https://semaphoreci.com/stanmd/vue-django)
 [![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
 [![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
-[![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
+
 
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate. There is a docker image for vue-django that you can run to check it out locally:
 ```bash

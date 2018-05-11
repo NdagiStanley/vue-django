@@ -19,11 +19,13 @@ If you are using `vue-cli@1.x`, it will be pulling the `master` branch of this t
 Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpack). Make sure to read it!
 
 # Vue Django
-[![Code Climate](https://codeclimate.com/github/NdagiStanley/vue-django/badges/gpa.svg)](https://codeclimate.com/github/NdagiStanley/vue-django)
-<a href="https://codeclimate.com/github/NdagiStanley/vue-django"><img src="https://codeclimate.com/github/NdagiStanley/vue-django/badges/issue_count.svg" /></a>
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
+
+[![Build Status](https://semaphoreci.com/api/v1/stanmd/vue-django/branches/develop/badge.svg)](https://semaphoreci.com/stanmd/vue-django)
 [![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
 [![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
-[![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
 
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
 
@@ -52,7 +54,7 @@ $ npm run dev
 ```
 
 ## Deploy
-To deploy your django project
+To deploy your django project, still within `my-project` directory, run:
 
 `$ .deploy.sh`
 
