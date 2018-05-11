@@ -1,9 +1,11 @@
 #!/usr/bin/expect -f
+
 # To be used primarily in CI (continuous integration)
 set timeout 360
 set BRANCH_NAME $env(BRANCH_NAME)
 
 spawn vue init NdagiStanley/vue-django#$BRANCH_NAME my-project
+
 expect {
     "Project name" { send "\n"; exp_continue }
     "Project version" { send "\n"; exp_continue }
