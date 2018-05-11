@@ -133,8 +133,8 @@ STATIC_URL = '/staticfiles/'
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
-# Tell nose to measure coverage on the 'foo' and 'bar' apps
+# Tell nose to measure coverage on the apps
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=foo,bar',
+    '--cover-package=app',  # For multiple apps use '--cover-package=foo, bar'
 ]
