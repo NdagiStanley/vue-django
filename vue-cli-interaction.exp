@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+set timeout 360
+
+spawn vue init NdagiStanley/vue-django my-project
+expect {
+    "Project name" { send "\n"; exp_continue }
+    "Project version" { send "\n"; exp_continue }
+    "Project description" { send "\n"; exp_continue }
+    "Author" { send "\n"; exp_continue }
+    "private" { send "\n"; exp_continue }
+    "Vue build" { send "\n"; exp_continue }
+    "Install vue-router?" { send "\n"; exp_continue }
+    "Use ESLint to lint your code?" { send "\n"; exp_continue }
+    "Pick an ESLint preset" { send "\n"; exp_continue }
+    "Setup unit tests" { send "\n"; exp_continue }
+    "Pick a test runner" { send "\n"; exp_continue }
+    "Setup e2e tests with Nightwatch?" { send "\n"; exp_continue }
+    eof
+}
