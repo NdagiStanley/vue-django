@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from views import index
+from app.views import index
 
 
 # Create your tests here.
