@@ -1,5 +1,5 @@
-echo 'Running npm install & npm build'
-npm set progress=false && npm install -s --no-progress && npm run build
+echo 'Run npm build'
+npm run build
 echo 'Done...'
 
 echo 'Format index.html as Jinja template'
@@ -12,6 +12,10 @@ echo 'Done...'
 
 echo 'Collect static'
 python manage.py collectstatic --noinput
+echo 'Done...'
+
+echo 'Run migrations'
+python manage.py migrate
 echo 'Done...'
 
 export PORT=8000
