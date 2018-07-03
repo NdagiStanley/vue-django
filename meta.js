@@ -125,5 +125,5 @@ module.exports = {
     "test/e2e/**/*": "e2e",
     "src/router/**/*": "router"
   },
-  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nTo build and serve in Django:\n\n  ./deploy.sh\n\nDocumentation can be found at https://goo.gl/V4eN7h"
+  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nTo build and serve in Django:\n\n  ./deploy.sh  (Remember to do this in a python virtual environment)\n\nDocumentation can be found at https://goo.gl/V4eN7h"
 };
