@@ -73,22 +73,31 @@ If you desire to use VueJS version 2.x with Django vesion 1.x run:
 ```bash
 $ cd my-project
 $ npm install
+```
+
+### Development
+
+Run:
+```bash
 $ npm run dev
 ```
+
+and edit away. `Hot reload` is enabled so any changes on `index.html` and the other files will reflect on [localhost:8080](http://localhost:8080/)
 
 ### Deploy with Django (Locally)
 
 Ensure python and pip is installed. Preferably create a virtual environment for the project.
 
 ```bash
-$ npm set progress=false && npm install -s --no-progress && npm run build
+$ npm run build
 $ pip install -r requirements.txt
 $ python format_index_html.py
 $ python manage.py collectstatic --noinput
+$ python manage.py migrate
 $ python manage.py runserver 0.0.0.0:8000
 ```
 
-The 5 commands above are contained in the `deploy.sh` so running the script is as good as running the aforementioned commands:
+The 6 commands above are contained in the `deploy.sh` so running the script is as good as running the aforementioned commands:
 ```
 $ ./deploy.sh
 ```

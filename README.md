@@ -38,6 +38,8 @@ This is a project template that includes `VueJS` and `Django` based on the [vue-
 ``` bash
 $ npm install -g vue-cli
 ```
+
+### Set up
 You might want to use ```sudo``` if you encounter permissions error
 ```bash
 $ vue init NdagiStanley/vue-django my-project
@@ -47,18 +49,26 @@ $ npm install
 
 Secondly, have *Python* installed and preferably create a virtual environment for the project.
 
-To develop
-
+### Develop
+Run:
 ```bash
 $ npm run dev
 ```
 
-## Deploy
-To deploy your django project, still within `my-project` directory, run:
+The app runs on [localhost:8080](http://localhost:8080/)
 
-`$ .deploy.sh`
+Update the files as you wish and the hot-reload will take effect. Add `js` and `css` files within the `static` folder in the root directory. Link them to the index.html in that same level (the root directory).
 
-Then get to [localhost:8000](http://localhost:8000/). You should have a page exactly like the image below or as the deployed instance mentioned earlier: [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/)
+### Deploy
+Ensure you have run `npm install` prior to the following command.
+
+Run:
+```bash
+$ .deploy.sh
+```
+(Run this command every time you make changes)
+
+At [localhost:8000](http://localhost:8000/) you should have a page exactly like the image below or as the deployed instance mentioned earlier: [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/)
 
 <p align="center">
   <img src="http://i.imgur.com/sY3IpBE.png?1" align="center" height="500" alt="Vue-Django">
