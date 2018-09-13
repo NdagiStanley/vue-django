@@ -7,6 +7,9 @@
 
 ### [Github repository](https://github.com/NdagiStanley/vue-django)
 
+<a href="https://github.com/NdagiStanley/vue-django"><img alt="star this repo" src="http://githubbadges.com/star.svg?user=NdagiStanley&repo=vue-django&style=default" /></a>
+<a href="https://github.com/NdagiStanley/vue-django/fork"><img alt="fork this repo" src="http://githubbadges.com/fork.svg?user=NdagiStanley&repo=vue-django&style=default" /></a>
+
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
