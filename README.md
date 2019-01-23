@@ -26,7 +26,7 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 [![Build Status](https://semaphoreci.com/api/v1/stanmd/vue-django/branches/develop/badge.svg)](https://semaphoreci.com/stanmd/vue-django)
 [![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
 [![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
-[![Coverage Status](https://coveralls.io/repos/github/NdagiStanley/vue-django/badge.svg)](https://coveralls.io/github/NdagiStanley/vue-django)
+[![Coverage Status](https://coveralls.io/repos/github/NdagiStanley/vue-django/badge.svg)](https://coveralls.io/github/NdagiStanley/vue-django) [![Greenkeeper badge](https://badges.greenkeeper.io/NdagiStanley/vue-django.svg)](https://greenkeeper.io/)
 
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
 
