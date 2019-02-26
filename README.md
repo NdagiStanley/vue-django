@@ -28,6 +28,9 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 [![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
 [![Coverage Status](https://coveralls.io/repos/github/NdagiStanley/vue-django/badge.svg)](https://coveralls.io/github/NdagiStanley/vue-django)
 
+[![](https://images.microbadger.com/badges/image/stanmd/vue-django.svg)](https://microbadger.com/images/stanmd/vue-django "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/stanmd/vue-django.svg)](https://microbadger.com/images/stanmd/vue-django "Get your own version badge on microbadger.com")
+
 [https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
 
 [Vue-Django Docs](https://ndagistanley.github.io/vue-django/) offer a more comprehensive documentation.
