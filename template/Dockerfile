@@ -5,12 +5,12 @@ RUN apk update && apk upgrade
 WORKDIR /app
 
 # Install python, pip and python packages
-RUN apk add python3 curl
+RUN apk add python3 py3-setuptools
 COPY requirements.txt requirements.txt
-RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
-  && rm -rf /var/cache/apk/* \
-  && pip3 install --upgrade pip \
+RUN pip3 install --upgrade pip \
   && pip3 install -r requirements.txt
+
+RUN rm -rf /var/cache/apk/*
 
 # Run the following commands for deployment
 COPY package.json package.json

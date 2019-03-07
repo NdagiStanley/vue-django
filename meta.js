@@ -6,6 +6,17 @@ module.exports = {
       }
 
       return options.inverse(this);
+    },
+    "random_secret_key": function(len) {
+      // https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+      var charCode, secret_key = '';
+      for (var i = 0; i < len; i++) {
+        // https://en.wikipedia.org/wiki/ISO/IEC_8859-1
+        charCode = String.fromCharCode(parseInt(Math.random() * 95) + 32);
+        secret_key += charCode === "'" ? "\\'" : charCode;
+      }
+
+      return secret_key;
     }
   },
   "prompts": {
@@ -18,7 +29,10 @@ module.exports = {
       "type": "string",
       "required": true,
       "label": "Project version",
-      "default": "1.0.0"
+      "default": "1.0.0",
+      "validate": function(ver) {
+        return /^[0-9]+\.[0-9]+\.[0-9]+/.test(ver);
+      }
     },
     "description": {
       "type": "string",
