@@ -40,7 +40,7 @@ The past command will run the latest tag of the image which has VueJS version 2.
 </p>
 
 <p align="center">
-  <img src="http://i.imgur.com/sY3IpBE.png?1" align="center" height="500" alt="Vue-Django">
+  <img src="https://i.imgur.com/sY3IpBE.png?1" align="center" height="500" alt="Vue-Django">
 </p>
 
 ## Usage of Vue-Django
