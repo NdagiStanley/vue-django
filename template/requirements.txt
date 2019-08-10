@@ -1,4 +1,4 @@
 coverage==4.5.4
 coveralls==1.8.2
 django==2.2.4
-django-nose==1.4.5
+django-nose==1.4.6
