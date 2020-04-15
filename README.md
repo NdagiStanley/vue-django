@@ -22,6 +22,7 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNdagiStanley%2Fvue-django.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FNdagiStanley%2Fvue-django?ref=badge_shield)
 
 [![Build Status](https://semaphoreci.com/api/v1/stanmd/vue-django/branches/develop/badge.svg)](https://semaphoreci.com/stanmd/vue-django)
 [![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
@@ -138,3 +139,7 @@ vue init username/repo my-project
 Thank you to all our backers!
 
 <a href="https://opencollective.com/vue-django#backers" target="_blank"><img src="https://opencollective.com/vue-django/backers.svg?width=890"></a>
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FNdagiStanley%2Fvue-django.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FNdagiStanley%2Fvue-django?ref=badge_large)
