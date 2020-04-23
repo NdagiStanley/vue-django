@@ -8,6 +8,6 @@
     "deploy-docs": "bash ./deploy-docs.sh"
   },
   "devDependencies": {
-    "vue-cli": "^2.8.1"
+    "vue-cli": "2.9.6"
   }
 }
