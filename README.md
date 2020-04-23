@@ -133,7 +133,7 @@ To create your own boilerplate, fork this repo or [vue-webpack-boilerplate](http
 vue init username/repo my-project
 ```
 
-## Backers [![Backers on Open Collective](https://opencollective.com/vue-django/backers/badge.svg)](#backers)
+## Backers [![Backers on Open Collective](https://opencollective.com/vue-django/backers/badge.svg)](#backers) [![Greenkeeper badge](https://badges.greenkeeper.io/NdagiStanley/vue-django.svg)](https://greenkeeper.io/)
 
 Thank you to all our backers!
 
