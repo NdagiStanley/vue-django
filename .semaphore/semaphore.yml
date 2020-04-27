@@ -17,7 +17,7 @@ blocks:
             - sudo apt install software-properties-common -y
             - 'sudo add-apt-repository -y ppa:deadsnakes/ppa && curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -'
             - sudo apt-get update && sudo apt-get install python3.7 nodejs -y
-            - sudo npm install -g vue-cli && expect vue-cli-interaction.exp && cd my-project
+            - sudo npm install -g @vue/cli && expect vue-cli-interaction.exp && cd my-project
             - sudo npm install
             - 'curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3.7 && sudo pip install -r requirements.txt'
   - name: Unit tests
