@@ -1,5 +1,7 @@
 FROM node:alpine
-MAINTAINER Stanley Ndagi "ndagis@gmail.com"
+LABEL maintainer="NdagiStanley" \
+      contact="ndagis@gmail.com" \
+      description="A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction integrated into a django application"
 RUN apk update && apk upgrade
 
 WORKDIR /app
@@ -19,6 +21,8 @@ COPY . .
 RUN npm run build
 RUN python3 format_index_html.py
 RUN python3 manage.py collectstatic --noinput
+
+ENV DEBUG=False
 
 # EXPOSE port to be used
 EXPOSE 8000
