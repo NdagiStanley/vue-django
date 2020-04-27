@@ -1,4 +1,5 @@
-coverage==4.5.4
 coveralls==1.8.2
 django==2.2.5
 django-nose==1.4.6
+gunicorn==20.0.4
+whitenoise==5.0.1

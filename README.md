@@ -1,11 +1,11 @@
 # vue-django-webpack-boilerplate
 
-> [@NdagiStanley](https://github.com/NdagiStanley) has mirrored the [fork](https://github.com/NdagiStanley/vue-django-fork) to have this repo here. This starterpack has proved useful to many and I thank you for the emails I have received from all of you. The reasoning behind this mirror is that this is an effort to **support the users** more by developing further on this project. From here on, I am calling on all potential collaborators by making it easier to make [PRs](https://github.com/NdagiStanley/vue-django/pulls) and adding utility of [Issues](https://github.com/NdagiStanley/vue-django/issues) in this 'new' repo (Of course with the same name :) ). Lastly, just so you know, I'll be keeping up with developments in the [`original`](https://github.com/vuejs-templates/webpack).
+> [@NdagiStanley](https://github.com/NdagiStanley) has mirrored the [fork](https://github.com/NdagiStanley/vue-django-fork) to have this repo here. This starterpack has proved useful to many and I thank you for the emails I have received from all of you. The reasoning behind this mirror is that; this is an effort to **support the users** more by developing further on this project. From here on, I am calling on all potential collaborators by making it easier to make [PRs](https://github.com/NdagiStanley/vue-django/pulls) and adding the utility of [Issues](https://github.com/NdagiStanley/vue-django/issues) in this 'new' repo (Of course with the same name 😀 ). Lastly, just so you know, I'll be keeping up with developments in the [`original`](https://github.com/vuejs-templates/webpack).
 
 <p align="center">
   <b>Listed in</b>
   <br>
-  <a href="https://github.com/vuejs/awesome-vue#scaffold" target="_blank"><img src="https://github.com/vuejs/awesome-vue/raw/master/logo.svg?sanitize=true" align="center" height="150" alt="Awesome VueJS"></a>
+  <a href="https://github.com/vuejs/awesome-vue#scaffold" target="_blank"><img src="https://github.com/vuejs/awesome-vue/raw/master/assets/logo.svg?sanitize=true" align="center" height="150" alt="Awesome VueJS"></a>
 </p>
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction integrated into a django application
@@ -20,12 +20,11 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 
 # Vue Django
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+![GitHub](https://img.shields.io/github/license/Ndagistanley/vue-django)
 [![Help Contribute to Open Source](https://www.codetriage.com/ndagistanley/vue-django/badges/users.svg)](https://www.codetriage.com/ndagistanley/vue-django)
 
 [![Build Status](https://semaphoreci.com/api/v1/stanmd/vue-django/branches/develop/badge.svg)](https://semaphoreci.com/stanmd/vue-django)
-[![Updates](https://pyup.io/repos/github/NdagiStanley/vue-django/shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
-[![Python 3](https://pyup.io/repos/github/NdagiStanley/vue-django/python-3-shield.svg)](https://pyup.io/repos/github/NdagiStanley/vue-django/)
+
 [![Coverage Status](https://coveralls.io/repos/github/NdagiStanley/vue-django/badge.svg)](https://coveralls.io/github/NdagiStanley/vue-django)
 
 [![](https://images.microbadger.com/badges/image/stanmd/vue-django.svg)](https://microbadger.com/images/stanmd/vue-django "Get your own image badge on microbadger.com")
@@ -133,7 +132,9 @@ To create your own boilerplate, fork this repo or [vue-webpack-boilerplate](http
 vue init username/repo my-project
 ```
 
-## Backers [![Backers on Open Collective](https://opencollective.com/vue-django/backers/badge.svg)](#backers)
+## Backers
+
+[![Backers on Open Collective](https://opencollective.com/vue-django/backers/badge.svg)](#backers)
 
 Thank you to all our backers!
 

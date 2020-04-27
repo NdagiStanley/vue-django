@@ -1,0 +1,1 @@
+web: python3 format_index_html.py && pip install -r requirements.txt && python3 manage.py collectstatic --noinput && python3 manage.py migrate && gunicorn vuedj.wsgi
