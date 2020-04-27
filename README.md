@@ -122,7 +122,7 @@ Then get to [localhost:8000](http://localhost:8000/). You should have a page exa
 
 ### Contributions
 
-**NB**: This repo has been forked from vue-webpack-boilerplate to help you start a Django application utilizing the awesomeness of `Vue JS` and `vue-cli`
+**NB**: This repo has been forked from vue-webpack-boilerplate to help you start a Django application utilizing the awesomeness of `VueJS` and `vue-cli`
 
 Feel free to contribute to this repo.
 
