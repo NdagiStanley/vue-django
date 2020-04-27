@@ -20,4 +20,4 @@ echo 'Done...'
 
 export PORT=8000
 echo 'Server runnning on port ' $PORT
-python manage.py runserver
+python manage.py runserver $PORT

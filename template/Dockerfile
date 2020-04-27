@@ -1,7 +1,7 @@
 FROM node:alpine
 LABEL maintainer="NdagiStanley" \
       contact="ndagis@gmail.com" \
-      description="A fully featured scaffolding integrating VueJS into a Django application"
+      description="@Django integrated with a full-featured @Webpack + (@vuejs / vue-loader) setup with hot reload, linting, testing & css extraction."
 RUN apk update && apk upgrade
 
 WORKDIR /app
