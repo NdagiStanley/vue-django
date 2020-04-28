@@ -1,63 +1,38 @@
 version: v1.0
-name: First pipeline example
+name: Docker - Docker Hub | Heroku
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 
 blocks:
-  - name: "Build"
+  - name: "Run scaffolding and test it"
     task:
-      env_vars:
-        - name: APP_ENV
-          value: prod
       jobs:
-      - name: Docker build
+      - name: run scaffolding
+        commands:
+          - checkout
+          - sudo apt-get update
+
+  - name: "Build & Test Docker image"
+    task:
+      jobs:
+      - name: Docker build & test
         commands:
           - checkout
           - ls -1
-          - echo $APP_ENV
+          - docker -v
           - echo "Docker build..."
+          - echo "Docker test..."
           - echo "done"
 
-  - name: "Smoke tests"
+  - name: "Push & Deploy"
     task:
       jobs:
-      - name: Smoke
+      - name: Push to Docker Hub
         commands:
-          - checkout
-          - echo "make smoke"
+          - echo "Docker Hub"
 
-  - name: "Unit tests"
-    task:
-      jobs:
-      - name: RSpec
+      - name: Deploy on Heroku
         commands:
-          - checkout
-          - echo "make rspec"
-
-      - name: Lint code
-        commands:
-          - checkout
-          - echo "make lint"
-
-      - name: Check security
-        commands:
-          - checkout
-          - echo "make security"
-
-  - name: "Integration tests"
-    task:
-      jobs:
-      - name: Cucumber
-        commands:
-          - checkout
-          - echo "make cucumber"
-
-  - name: "Push Image"
-    task:
-      jobs:
-      - name: Push
-        commands:
-          - checkout
-          - echo "make docker.push"
+          - heroku -v
