@@ -1,0 +1,24 @@
+version: v1.0
+name: This is Pipeline 1
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+    - name: "Deploy to Heroku via Docker"
+    task:
+      secrets:
+        - name: heroku
+      env_vars:
+        - name: HEROKU_APP
+          value: vdjango
+      jobs:
+      - name: Deploy on Heroku
+        commands:
+          - docker pull stanmd/vue-django:$SEMAPHORE_GIT_BRANCH
+          - heroku container:login
+          - docker tag stanmd/vue-django:$SEMAPHORE_GIT_BRANCH registry.heroku.com/$HEROKU_APP/web
+          - docker push registry.heroku.com/$HEROKU_APP/web
+          - heroku stack:set container --app $HEROKU_APP
+          - heroku container:release web --app $HEROKU_APP
