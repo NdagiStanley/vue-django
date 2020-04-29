@@ -22,8 +22,6 @@ RUN sh build.sh
 
 ENV DEBUG=False
 
-ENV DEBUG=False
-
 # EXPOSE port to be used
 ENV PORT=8000
 EXPOSE 8000
