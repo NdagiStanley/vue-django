@@ -16,9 +16,9 @@ blocks:
         jobs:
         - name: Deploy on Heroku
           commands:
-            - docker pull stanmd/vue-django:$SEMAPHORE_GIT_BRANCH
+            - docker pull stanmd/vue-django:latest
             - heroku container:login
-            - docker tag stanmd/vue-django:$SEMAPHORE_GIT_BRANCH registry.heroku.com/$HEROKU_APP/web
+            - docker tag stanmd/vue-django:latest registry.heroku.com/$HEROKU_APP/web
             - docker push registry.heroku.com/$HEROKU_APP/web
             - heroku stack:set container --app $HEROKU_APP
             - heroku container:release web --app $HEROKU_APP
