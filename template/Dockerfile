@@ -1,5 +1,7 @@
 FROM node:alpine
-MAINTAINER Stanley Ndagi "ndagis@gmail.com"
+LABEL maintainer="NdagiStanley" \
+      contact="ndagis@gmail.com" \
+      description="@Django integrated with a full-featured @Webpack + (@vuejs / vue-loader) setup with hot reload, linting, testing & css extraction."
 RUN apk update && apk upgrade
 
 WORKDIR /app
@@ -12,16 +14,17 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
   && pip3 install --upgrade pip \
   && pip3 install -r requirements.txt
 
-# Run the following commands for deployment
+# Install node modules
 COPY package.json package.json
 RUN npm set progress=false && npm install -s --no-progress
 COPY . .
-RUN npm run build
-RUN python3 format_index_html.py
-RUN python3 manage.py collectstatic --noinput
+RUN sh build.sh
+
+ENV DEBUG=False
 
 # EXPOSE port to be used
+ENV PORT=8000
 EXPOSE 8000
 
 # Set command to run as soon as container is up
-CMD python3 manage.py runserver 0.0.0.0:8000
+CMD python3 manage.py runserver 0.0.0.0:$PORT

@@ -57,3 +57,5 @@ ENV/
 
 # Staticfiles
 staticfiles/
+
+cc-test-reporter

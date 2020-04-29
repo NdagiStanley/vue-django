@@ -1,0 +1,58 @@
+version: v1.0
+name: Docker - Docker Hub | Heroku
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "Run scaffolding and test it"
+    task:
+      secrets:
+        - name: coveralls
+      jobs:
+      - name: run scaffolding
+        commands:
+          - checkout
+          - sudo apt-get update
+          - sudo apt install software-properties-common -y
+          - sudo add-apt-repository -y ppa:deadsnakes/ppa && curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+          - sudo apt-get update && sudo apt-get install python3.7 nodejs -y
+          - export BRANCH_NAME=$SEMAPHORE_GIT_BRANCH
+          - sudo npm install -g @vue/cli @vue/cli-init && expect vue-cli-interaction.exp && cd my-project
+          - sudo npm install
+          - curl -sS https://bootstrap.pypa.io/get-pip.py | sudo python3.7 && sudo pip install -r requirements.txt
+          - npm run build && sudo python3.7 format_index_html.py && sudo python3.7 manage.py test
+          - coveralls
+
+  - name: "Build, Test & Push Docker image"
+    task:
+      secrets:
+        - name: dockerhub-creds
+      jobs:
+      - name: Docker build, test, push
+        commands:
+          - checkout
+          - sudo apt-get update
+          - sudo apt install software-properties-common -y
+          - sudo add-apt-repository -y ppa:deadsnakes/ppa && curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+          - sudo apt-get update && sudo apt-get install python3.7 nodejs -y
+          - export BRANCH_NAME=$SEMAPHORE_GIT_BRANCH
+          - sudo npm install -g @vue/cli @vue/cli-init && expect vue-cli-interaction.exp && cd my-project
+          - echo "Build image"
+          - docker build -t stanmd/vue-django:$BRANCH_NAME .
+          - echo "Test image"
+          - docker run -it stanmd/vue-django:$BRANCH_NAME python3 manage.py test
+          - echo "Push image"
+          - echo "${DOCKER_PASSWORD}" | docker login -u stanmd --password-stdin
+          - if [[ "$BRANCH_NAME" =~ ^(v2-d2|v1-d1|v2-d1)$ ]]; then docker push stanmd/vue-django:$BRANCH_NAME; elif [ "$BRANCH_NAME" == develop ]; then docker push stanmd/vue-django; else echo "Not pushing to DockerHub"; fi
+
+promotions:
+  - name: Production Deployment
+    pipeline_file: prod-deploy.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'master'"
+  - name: Default Deployment
+    pipeline_file: deploy.yml
+    auto_promote:
+      when: "result = 'passed' and (branch =~ 'develop|v\d-d\d')"
