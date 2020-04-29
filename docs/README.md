@@ -100,9 +100,9 @@ $ python manage.py migrate
 $ python manage.py runserver 0.0.0.0:8000
 ```
 
-The 6 commands above are contained in the `deploy.sh` so running the script is as good as running the aforementioned commands:
+The 6 commands above are contained in the `server.sh` so running the script is as good as running the aforementioned commands:
 ```
-$ ./deploy.sh
+$ ./server.sh
 ```
 
 Open the app at [localhost:8000](localhost:8000)
@@ -117,4 +117,4 @@ If you use docker in your workflow, there is a Dockerfile (that you can build an
 $ docker-compose up
 ```
 
-Open the app at [localhost:8000](localhost:8000). You'll have to stop the Django server if you ran it earlier or change the port within the `deploy.sh` from `8000` to something else.
+Open the app at [localhost:8000](localhost:8000). You'll have to stop the Django server if you ran it earlier or change the port within the `server.sh` from `8000` to something else.

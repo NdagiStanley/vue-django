@@ -45,12 +45,10 @@ $ npm install -g vue-cli
 ### Set up
 You might want to use ```sudo``` if you encounter permissions error
 ```bash
-$ vue init NdagiStanley/vue-django my-project
+$ vue init NdagiStanley/vue-django my-project  # Follow the prompts
 $ cd my-project
 $ npm install
 ```
-
-Secondly, have *Python* installed and preferably create a virtual environment for the project.
 
 ### Develop
 Run:
@@ -62,12 +60,13 @@ The app runs on [localhost:8080](http://localhost:8080/)
 
 Update the files as you wish and the hot-reload will take effect. Add `js` and `css` files within the `static` folder in the root directory. Link them to the index.html in that same level (the root directory).
 
-### Deploy
-Ensure you have run `npm install` prior to the following command.
+### Run the Django server
+Have *Python* installed and preferably use a [virtual python environment](#virtualenv) for this.
 
 Run:
 ```bash
-$ .deploy.sh
+$ python -m pip install -r requirements.txt
+$ sh server.sh
 ```
 (Run this command every time you make changes)
 
