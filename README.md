@@ -27,10 +27,13 @@ Common topics are discussed in the [docs](http://vuejs-templates.github.io/webpa
 
 [![Coverage Status](https://coveralls.io/repos/github/NdagiStanley/vue-django/badge.svg)](https://coveralls.io/github/NdagiStanley/vue-django)
 
-[![](https://images.microbadger.com/badges/image/stanmd/vue-django.svg)](https://microbadger.com/images/stanmd/vue-django "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/stanmd/vue-django.svg)](https://microbadger.com/images/stanmd/vue-django "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/stanmd/vue-django.svg)](https://microbadger.com/images/stanmd/vue-django)
 
-[https://vuedjango.herokuapp.com/](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
+**vue-django** in DockerHub:
+* [Homepage](https://hub.docker.com/repository/docker/stanmd/vue-django)
+* [API](https://hub.docker.com/v2/repositories/stanmd/vue-django/tags?page_size=1024)
+
+[https://vuedjango.herokuapp.com](https://vuedjango.herokuapp.com/) is a deployed instance of this boilerplate.
 
 [Vue-Django Docs](https://ndagistanley.github.io/vue-django/) offer a more comprehensive documentation.
 

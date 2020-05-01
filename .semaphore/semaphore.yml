@@ -45,7 +45,7 @@ blocks:
           - docker run -it stanmd/vue-django:$BRANCH_NAME python3 manage.py test
           - echo "Push image"
           - echo "${DOCKER_PASSWORD}" | docker login -u stanmd --password-stdin
-          - if [[ "$BRANCH_NAME" =~ develop|v\d-d\d ]]; then docker push stanmd/vue-django:$BRANCH_NAME; elif [ "$BRANCH_NAME" == master ]; then docker tag stanmd/vue-django:master stanmd/vue-django:latest && docker push stanmd/vue-django:latest; else echo "Not pushing to DockerHub"; fi
+          - if [[ "$BRANCH_NAME" =~ develop|v1-d1|v2-d1|v2-d2|v2-d3 ]]; then docker push stanmd/vue-django:$BRANCH_NAME; elif [ "$BRANCH_NAME" == master ]; then docker tag stanmd/vue-django:master stanmd/vue-django:latest && docker push stanmd/vue-django:latest; else echo "Not pushing to DockerHub"; fi
 
 promotions:
   - name: Production Deployment
@@ -55,4 +55,4 @@ promotions:
   - name: Default Deployment
     pipeline_file: deploy.yml
     auto_promote:
-      when: "result = 'passed' and (branch =~ 'develop|v\d-d\d')"
+      when: "result = 'passed' and (branch =~ 'develop|v1-d1|v2-d1|v2-d2|v2-d3')"
