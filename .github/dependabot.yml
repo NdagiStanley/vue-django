@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: docker
+  directory: "/template"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+- package-ecosystem: pip
+  directory: "/template"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: urllib3
+    versions:
+    - 1.26.3
+  - dependency-name: coveralls
+    versions:
+    - 3.0.0
+  - dependency-name: django
+    versions:
+    - 3.0.7
