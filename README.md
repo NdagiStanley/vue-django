@@ -119,6 +119,8 @@ Then get to [localhost:8000](http://localhost:8000/). You should have a page exa
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
 
+## Community
+
 ### Contributions
 
 **NB**: This repo has been forked from vue-webpack-boilerplate to help you start a Django application utilizing the awesomeness of `VueJS` and `vue-cli`
@@ -131,7 +133,19 @@ To create your own boilerplate, fork this repo or [vue-webpack-boilerplate](http
 vue init username/repo my-project
 ```
 
-## Backers
+### Star History
+
+If this repo is helpful to you, please star it. Thanks!
+
+<a href="https://star-history.com/#ndagistanley/vue-django&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ndagistanley/vue-django&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ndagistanley/vue-django&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ndagistanley/vue-django&type=Date" />
+  </picture>
+</a>
+
+### Backers
 
 [![Backers on Open Collective](https://opencollective.com/vue-django/backers/badge.svg)](#backers)
 
